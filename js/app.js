@@ -1,7 +1,7 @@
 // api load function
 const loadProducts = () => {
-  const url = `https://fakestoreapi.com/products`;
-  fetch(url)
+  // const url = `https://fakestoreapi.com/products`;
+  fetch('../js/data.json')
     .then((response) => response.json())
     .then((data) => showProducts(data));
     // .then((data) => console.log(data));
@@ -19,12 +19,12 @@ const showProducts = (products) => {
         <div>
           <img class="product-image" src=${image}>
         </div>
-        <h4>${product.title}</h4>
-        <h6 class="my-3">Category: ${product.category}</h6>
+        <h4 class="title-color fw-bold">${product.title}</h4>
+        <h6 class="my-3">Category: <span class="fw-bold">${product.category}</span></h6>
         <h3 class="mb-2">Price: $ ${product.price}</h3>
-        <p class="m-1">Avarage Rating: ${product.rating.rate}</p>
+        <p class="m-1">Avarage Rating: <span class="fw-bold">${product.rating.rate}</span></p>
         <p class="">Rating User: <br/>
-        <i class="fas fa-user mt-2 "></i> ${product.rating.count}</p>
+        <i class="fas fa-user mt-2 "></i> <span class="fw-bold">${product.rating.count}</span></p>
         <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
         <button id="details-btn" class="btn btn-danger">Details</button>
       </div>
