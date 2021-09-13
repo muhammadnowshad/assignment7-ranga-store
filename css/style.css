@@ -2,6 +2,9 @@ body {
   overflow-x: hidden;
   font-family: "Montserrat", sans-serif;
 }
+
+/*==========  search area style start ============*/
+
 .search-field {
   border: none;
   border-radius: 50px;
@@ -13,7 +16,7 @@ body {
   border: none;
 }
 .search-box {
-  border: 1px solid rgb(3, 118, 211);
+  border: 1px solid green;
   width: 281px;
   border-radius: 5px;
   margin: auto;
@@ -22,12 +25,14 @@ body {
 .search-button {
   padding: 10px 50px;
   border-radius: 25px;
-  margin-left: 20px;
 }
+
+/*==========  search area style end ============*/
+
+/*==========  product style start ============*/
 #all-products {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  /* border: 1px solid black; */
   text-align: center;
   width: 100%;
   margin: auto;
@@ -37,9 +42,14 @@ body {
 .single-product {
   padding: 10px;
   transition: 0.6s;
+  box-shadow: 4px 4px 7px gray;
+  border-radius: 10px;
+  border: 1px solid #A7F3D0;
+  margin: 10px;
+  background-color: #ECFDF5;
 }
 .single-product:hover {
-  box-shadow: 4px 4px 7px gray;
+  box-shadow: 8px 8px 10px gray;
   border-radius: 10px;
   border: 1px solid cyan;
 }
@@ -47,9 +57,12 @@ body {
   width: 150px;
   height: 150px;
 }
+/*==========  product area style end ============*/
+
+/*==========  cart area style start ============*/
 .cart {
   width: 350px;
-  /* border: 1px solid green; */
+  border: 1px solid green;
   padding: 10px;
   box-shadow: 10px 10px 20px gray;
   border-radius: 5px;
@@ -59,6 +72,10 @@ body {
 .cart-main {
   padding-right: 30px;
 }
+/*==========  cart area style end ============*/
+
+
+/* responsive style  */
 @media only screen and (max-width: 768px) {
   #all-products {
     display: grid;
@@ -66,7 +83,7 @@ body {
   }
   .cart {
     width: 300px;
-    /* border: 1px solid green; */
+    border: 1px solid green;
     padding: 10px;
     box-shadow: 10px 10px 20px gray;
     border-radius: 5px;
