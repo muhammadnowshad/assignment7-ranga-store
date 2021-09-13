@@ -12,6 +12,8 @@
   <!-- Bootstrap CSS style -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <!-- Font Awesome  -->
+  <link rel="stylesheet" href="css/all.css">
 
   <!-- google Montserrat  font  -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -22,34 +24,33 @@
 <body>
   <!-- Header area start -->
   <header>
-    <h1 class="text-center mt-5 text-success">Welcome To My Awesome Store</h1>
+    <h1 class="text-center my-5 text-success">Welcome To My Awesome Store</h1>
+      <!-- search area start -->
+      <div class="search-field mb-3">
+        <div class="search-box d-flex justify-content-end">
+          <input id="input-field" class="search-field" type="text" />
+          <button type="button" class="btn btn-danger search-button" data-toggle="button" aria-pressed="false"
+            autocomplete="off" id="search-btn" onclick="loadProducts()">
+            Search
+          </button>
+        </div>
+      </div>
+      <!-- search area  end-->
   </header>
   <!-- Header area end -->
 
   <!-- Main section start -->
   <main class="main">
-    <!-- search area start -->
-    <div class="search-field">
-      <div class="search-box d-flex justify-content-end">
-        <input id="input-field" class="search-field" type="text" />
-        <button type="button" class="btn btn-danger search-button" data-toggle="button" aria-pressed="false"
-          autocomplete="off" id="search-btn" onclick="loadProducts()">
-          Search
-        </button>
-      </div>
-    </div>
-    <!-- search area  end-->
-
     <!-- product area  -->
-    <div class="row mx-5">
+    <div class="row g-0">
       <!-- Product UI  -->
-      <div class="col-lg-9 col-md-9 col-7">
+      <div class="col-md-9 col-lg-9 col-sm-7">
         <div id="all-products" class="">
 
         </div>
       </div>
       <!-- Product Calculation start -->
-      <div class="col-lg-3 col-md-3 col-5 cart-main">
+      <div class="col-md-3 col-lg-3 col-sm-5 cart-main">
         <div class="cart" id="my-cart">
           <table class="table">
             <thead>
